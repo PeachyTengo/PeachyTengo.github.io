@@ -28,9 +28,26 @@
             <li><a href="#section2">Experience</a></li>
             <li><a href="#section3">Education</a></li>
             <li><a href="#section4">Skills</a></li>
-            <li><a href="#section5">Projects/Achievements</a></li>
+            <li><a href="#section5">Certifications/Achievements</a></li>
             <li><a href="#section6">Additional Requirements</a></li>
           </ul><br>
+          <div id="clock" text-bottom>
+            <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
+            <script src= "https://waph-uc.github.io/clock.js"></script>
+            <script>
+        			var canvas = document.getElementById("analog-clock");
+        			var ctx = canvas.getContext("2d");
+        			var radius = canvas.height / 2;
+        			ctx.translate(radius, radius);
+        			radius = radius * 0.90;
+        			setInterval(drawClock, 1000);
+        			function drawClock(){
+        				drawFace(ctx, radius);
+        				drawNumbers(ctx, radius);
+        				drawTime(ctx, radius);
+        			}
+        		</script>
+          </div>
         </div>
       
         <div class="col-sm-10 text-center">
