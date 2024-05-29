@@ -23,17 +23,22 @@
       <div class="row content">
         <div class="col-sm-2 sidenav">
           <h4> Jump To</h4>
-          <ul class="nav nav-pills nav-stacked" data-spy="affix">
+          <ul class="nav nav-pills nav-stacked" data-spy="affix" text-center>
             <li class="active"><a href="#section1">About Me</a></li>
             <li><a href="#section2">Experience</a></li>
             <li><a href="#section3">Education</a></li>
             <li><a href="#section4">Skills</a></li>
             <li><a href="#section5">Certifications/Achievements</a></li>
             <li><a href="#section6">Additional Requirements</a></li>
+            <div id="digit-clock"></div>
             <div media-bottom>
               <canvas id="analog-clock" width="150" height="150" style="background-color:#A9A9A9"></canvas>
               <script src= "https://waph-uc.github.io/clock.js"></script>
               <script>
+                function displayTime() {
+            			document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
+            		}
+            		setInterval(displayTime, 500);
           			var canvas = document.getElementById("analog-clock");
           			var ctx = canvas.getContext("2d");
           			var radius = canvas.height / 2;
@@ -86,6 +91,8 @@
             <h3><strong>Certifications and Achievements</strong></h3>
           </div>
           <div id="section6">
+            <h3><strong>Additional Requirements</strong></h3>
+            <p>Link to WAPH</p>
             <p>Page Tracker</p>
           </div>
         </div>
