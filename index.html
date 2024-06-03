@@ -126,6 +126,13 @@
 		console.log("From JokeAPI: " + JSON.stringify(result));
 		$("#response").html("A Programming joke of the day: " + result.joke);
 		});
+	if (document.cookie.indexOf("username") < 0) {
+    		alert('No username in cookie, setting a new one.');
+    		document.cookie = "username=YOURusername"; 
+	} 
+	else {
+    		alert("My cookie: " + document.cookie);
+	}
 	
       </script>
     </div>
