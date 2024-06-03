@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Tyler Pilcher's Website</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
       .row.content{
         height: 1500px;
@@ -85,6 +86,7 @@
 	    <div id="digit-clock"></div>
             <canvas id="analog-clock" width="150" height="150" style="background-color:#A9A9A9"></canvas>
             <script src= "https://waph-uc.github.io/clock.js"></script>
+	    <div id="response"></div>
           </div>
         </div>
       </div>
@@ -104,6 +106,15 @@
           drawNumbers(ctx, radius);
           drawTime(ctx, radius);
         }
+	.get("https://v2.jokeapi.dev/joke/any?type=single",
+		function(result){
+			if(result.length == 0){
+				return;
+			}
+			console.log("From JokeAPI: " + JSON.stringify(result));
+			$("#response").html("A Programming joke of the day: " + result.joke);
+		});
+	
       </script>
     </div>
 
