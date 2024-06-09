@@ -222,8 +222,9 @@
 	                .then(response => response.json())
 	                .then(data => {
 	                    if (data && data.data && data.data.length > 0) {
-	                        const temperature = data.data[0].temp;
-	                        document.getElementById('temperature').innerText = `Current Temperature: ${temperature}°C`;
+	                        const temperatureC = data.data[0].temp;
+				const temperatureF = (9/5 * temperatureC) + 32;
+	                        document.getElementById('temperature').innerText = `Current Temperature: ${temperatureF.toFixed(2)}°F`;
 	                    } else {
 	                        document.getElementById('temperature').innerText = 'Unable to fetch weather data.';
 	                    }
