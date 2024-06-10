@@ -25,7 +25,8 @@ In this project, I have used the lessons and the capabilities I have learned fro
 I created and deployed my personal website on Github cloud. In the websie I have included details such as my resume information, name, headshot, contact information and my background. I have also created a link to the waph.html page.
 
 ## Non-technical Requirements
-For these requirements, I used Bootstrap to include different aspects into my website including but not limited to a navigation bar. I was also able to change the color of the background and the text color. I have also included a page tracker that will display the flag of the country the person has visited from.
+For these requirements, I used Bootstrap to include different aspects into my website including but not limited to a navigation bar. I was also able to change the color of the background and the text color. I have also included a page tracker that will display the flag of the country the person has visited from.  
+
 ![<p align="center">Flag](images/flag.PNG)</p>
 <p align="center"> Figure 2: Flag (Page Tracker) </p>
 
